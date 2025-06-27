@@ -12,6 +12,7 @@
 
     }
     .nav-links {
+        top: 200px;
         margin-left: 1495px;
         color: white;
         
@@ -35,43 +36,49 @@
 
 
     .Dashboard {
+        margin-top: 100px;
         color: white;
         font-size: 34px;
         margin-left: 15px;
     }
+
+    .tab-borders {
+        display: flex;
+        gap: 90px;
+        margin-left: 1625px;
+    }
     
     .vl {
         border-left: 1px solid rgb(255, 255, 255);
-        top: 195px;
+        top: 185px;
         height: 45px;
-        margin-left: 1625px;
-        position: fixed;
+
 
     }
 
     .v2 {
         border-left: 1px solid rgb(255, 255, 255);
-        top: 195px;
+        top: 185px;
         height: 45px;
-        margin-left: 1720px;
-        position: fixed;
+
 
     }
     .line {
-        position: fixed;
-        top: 235px;
+        top: 210px;
         width: 100%;
+        margin-bottom: 25px;
 
     }
 
     .Appointments {
+        margin-top: 50px;
         margin-left: 50px;
         color: white;
-        position: fixed;
+
     }
 
     .rectangle {
-        float: right;
+        position: fixed;
         width: 250px;
         height: 500px;
         background-color: rgba(255, 255, 255, 0.164);
@@ -81,7 +88,6 @@
     .rectangle:hover {
         box-shadow: 5px 10px 15px black;
         border-radius: 5px;
-        transition: fadeIn box-shadow 0.2s border-radius 0.2s;
     }
     
     .curr-shift {
@@ -102,14 +108,19 @@ s
 <!-- Chrome Dev tools give you the ability to copy exactly what colors/measurements a website has for an html element-->
 
 <p class = "title">  Welcome, [insert User]</p>
+<div class = "Top-of-Screen">
 <div class = "nav-links"> 
     <a class = "available-shifts" href = "blank"> Available Shifts</a>
     <a class = "inbox" href = "blank"> Inbox </a>
     <a class = "settings" href = "blank"> Settings </a>
+    
 </div>
-<div class="vl"></div>
-<div class="v2"></div>
+<div class = "tab-borders">
+    <div class="vl"></div>
+    <div class="v2"></div>
+</div>
 <hr class = "line">
+</div>
 <p class = "Dashboard"> ** Dashboard Goes Here</p>
 <div class = "Appointments"> 
     <h1>Appointments</h1>
