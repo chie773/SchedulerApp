@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <style>
+        body {
+            background-color: rgb(5, 44, 77);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 2vh 2vw;
+        }
+
+        .shifts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+        }
+
+        .shift-card {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 2vh 2vw;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        button {
+            background-color: white;
+            color: black;
+            padding: 0.5em 1.5em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+    <meta charset=""UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Available Shifts</title>
+</head>
+<body>
+    <h1> Available Shifts </h1>
+    <div class="shifts-list">
+        <div class="shift-card">
+            <h2>Shift 1</h2>
+            <p>Area: Emergency Room</p>
+            <p>Time: 9:00 AM – 5:00 PM</p>
+            <button>Claim Shift</button>
+        </div>
+
+        <div class="shift-card">
+            <h2>Shift 2</h2>
+            <p>Area: ICU</p>
+            <p>Time: 2:00 PM – 10:00 PM</p>
+            <button>Claim Shift</button>
+        </div>
+    </div>
+    
+</body>
+
+</html>
