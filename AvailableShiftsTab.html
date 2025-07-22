@@ -4,10 +4,119 @@
     <style>
         body {
             background-color: rgb(5, 44, 77);
-            color: white;
-            font-family: Arial, sans-serif;
             margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 2vh 2vw;
+            flex-wrap: wrap;
+        }
+
+        .title {
+            color: white;
+            font-size: 4vw;
+            margin: 1vh 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5vw;
+            align-items: center;
+            color: white;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            position: relative;
+            padding: 0 1vw;
+        }
+
+    /* Add vertical lines between links */
+        .nav-links a:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 10%;
+            height: 80%;
+            width: 1px;
+            background-color: white;
+        }  
+
+        .tab-borders {
+            display: flex;
+            gap: 1vw;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 1vh 2vw;
+        }
+
+        .vl, .v2 {
+            border-left: 1px solid white;
+            height: 3vh;
+        }
+
+        .line {
+            width: 100%;
+            border: none;
+            border-top: 1px solid white;
+            margin: 1vh 0;
+        }
+
+        .Appointments ul {
+            padding-left: 1.5rem;
+        }
+
+        .rectangle {
+            position: fixed;
+            right: 2vw;
+            top: 20vh;
+            width: 20vw;
+            min-width: 250px;
+            max-width: 300px;
+            height: auto;
+            min-height: 300px;
+            background-color: rgba(255, 255, 255, 0.164);
+            color: white;
+            padding: 2vh 1vw;
+            margin: 3vh 2vw;
+            box-sizing: border-box;
+            transition: 0.3s ease;
+        }
+
+        .rectangle:hover {
+            box-shadow: 5px 10px 15px black;
+            border-radius: 5px;
+        }
+
+        .start-time {
+            margin-top: 5vh;
+        }
+
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                justify-content: flex-start;
+                margin-top: 1vh;
+            }
+
+            .title {
+                font-size: 6vw;
+            }
+
+            .rectangle {
+                width: 90%;
+                margin: 2vh auto;
+            }
         }
 
         .shifts-list {
@@ -18,7 +127,9 @@
 
         .shift-card {
             background-color: rgba(255, 255, 255, 0.15);
-            padding: 2vh 2vw;
+            padding: 2vh 2.5vw;
+            max-width: 350px;
+            margin-left: 10px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
         }
@@ -31,17 +142,32 @@
             border-radius: 4px;
             cursor: pointer;
         }
+
     </style>
     <meta charset=""UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Available Shifts</title>
 </head>
+
+
 <body>
-    <h1> Available Shifts </h1>
-    <div class="shifts-list">
+
+<div class="top-bar">
+    <p class="title"> Available Shifts </p>
+    <div class="nav-links"> 
+        <a href="Scheduler.html"> Homepage</a>
+        <a href="#">Inbox</a>
+        <a href="#">Settings</a>
+    </div>
+</div>
+
+<hr class="line">
+
+<div class="shifts-list">
         <div class="shift-card">
             <h2>Shift 1</h2>
-            <p>Area: Emergency Room</p>
+            <p>Area: Waldorf, MD 20***</p>
+            <p>Patient: Jane Doe</p>
             <p>Time: 9:00 AM – 5:00 PM</p>
             <button>Claim Shift</button>
         </div>
@@ -52,8 +178,70 @@
             <p>Time: 2:00 PM – 10:00 PM</p>
             <button>Claim Shift</button>
         </div>
-    </div>
-    
-</body>
 
+        <div class="shift-card">
+            <h2>Shift 2</h2>
+            <p>Area: ICU</p>
+            <p>Time: 2:00 PM – 10:00 PM</p>
+            <button>Claim Shift</button>
+        </div>
+
+        <div class="shift-card">
+            <h2>Shift 2</h2>
+            <p>Area: ICU</p>
+            <p>Time: 2:00 PM – 10:00 PM</p>
+            <button>Claim Shift</button>
+        </div>
+
+        <div class="shift-card">
+            <h2>Shift 2</h2>
+            <p>Area: ICU</p>
+            <p>Time: 2:00 PM – 10:00 PM</p>
+            <button>Claim Shift</button>
+        </div>
+
+
+        <div class="shift-card">
+            <h2>Shift 2</h2>
+            <p>Area: ICU</p>
+            <p>Time: 2:00 PM – 10:00 PM</p>
+            <button>Claim Shift</button>
+        </div>
+
+        <div class="shift-card">
+            <h2>Shift 2</h2>
+            <p>Area: ICU</p>
+            <p>Time: 2:00 PM – 10:00 PM</p>
+            <button>Claim Shift</button>
+        </div>
+
+        <div class="shift-card">
+            <h2>Shift 2</h2>
+            <p>Area: ICU</p>
+            <p>Time: 2:00 PM – 10:00 PM</p>
+            <button>Claim Shift</button>
+        </div>
+
+        <div class="shift-card">
+            <h2>Shift 2</h2>
+            <p>Area: ICU</p>
+            <p>Time: 2:00 PM – 10:00 PM</p>
+            <button>Claim Shift</button>
+        </div>
+
+    </div>
+
+<!-- Need to find a way to auto update the amount of shifts during the day-->
+
+<div class="curr-shift">
+    <div class="rectangle">
+        <h1>Current Shift:</h1>
+        <p>*insert Area, Patient*</p>
+        <h2>Time: *insert*</h2>
+        <h3 class="start-time">Start-Time: </h3>
+        <h3 class="end-time">End-Time: </h3>
+    </div>
+</div>
+
+</body>
 </html>
